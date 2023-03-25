@@ -1,176 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HoliDates</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <header>
-      <nav class="text-center border">
-        <h1>HoliDates</h1>
-        <q>To travel is to love</q>
-      </nav>
-    </header>
-    <main>
-      <section id="holiday-list" class="text-center container">
-        <div class="row flex">
-          <div class="col-6">
-            <div class="card-wrapper">
-              <div class="card-border"></div>
-              <div id="tool-bar" class="border card card-shadow">
-                <h3>Query Options</h3>
-                <div class="flex flex-wrap justify-content-center">
-                  <input id="search-query" type="text" placeholder="Search" />
-                  <input id="year-query" type="text" placeholder="2022" />
-                  <input id="month-query" type="text" placeholder="Month" />
-                  <input id="day-query" type="text" placeholder="Day" />
-                  <input id="country-query" type="text" placeholder="VN" />
-                  <input
-                    id="language-query"
-                    type="text"
-                    placeholder="Language Code"
-                  />
-                  <p class="holiday-text">
-                    Please input the country code first. You can find the target
-                    country code by clicking on the "Render Countries" button.
-                    <br /><br />Kindly input the language code if you would like
-                    to translate the name of the country's holiday to your
-                    preferred languages. You can find the target language code
-                    by clicking on the "Render Languages" button.
-                    <br /><br />Note: This app is limited to last year's
-                    historical data only.
-                  </p>
-                  <button id="holidays-btn" class="btn">Render Holiday</button>
-                </div>
-              </div>
-            </div>
-            <div class="card-wrapper">
-              <div class="card-border"></div>
-              <div id="holidays-list" class="flex flex-column card card-shadow">
-                <h3>Holidays of a Country</h3>
-                <ul>
-                  <li>
-                    <div class="bullet">1</div>
-                    <div class="li-wrapper">
-                      <div class="li-title">Holiday Name 1</div>
-                      <div class="li-text">Wednesday - 2022-01-01</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="bullet">2</div>
-                    <div class="li-wrapper">
-                      <div class="li-title">Holiday Name 2</div>
-                      <div class="li-text">Thursday - 2022-01-02</div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="card-wrapper">
-              <div class="card-border"></div>
-              <div
-                id="countries-list"
-                class="flex flex-column card card-shadow"
-              >
-                <h3>Country List</h3>
-                <div>
-                  <button id="countries-list-btn" class="btn top-right-btn">
-                    Render Countries List
-                  </button>
-                </div>
-                <ul>
-                  <li>
-                    <div class="bullet">1</div>
-                    <div class="li-wrapper">
-                      <div class="li-title">Country Name 1</div>
-                      <div class="li-text">Code: CN1</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="bullet">2</div>
-                    <div class="li-wrapper">
-                      <div class="li-title">Country Name 2</div>
-                      <div class="li-text">Code: CN2</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="bullet">3</div>
-                    <div class="li-wrapper">
-                      <div class="li-title">Country Name 3</div>
-                      <div class="li-text">Code: CN3</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="bullet">4</div>
-                    <div class="li-wrapper">
-                      <div class="li-title">Country Name 4</div>
-                      <div class="li-text">Code: CN4</div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="card-wrapper">
-              <div class="card-border"></div>
-              <div
-                id="languages-list"
-                class="flex flex-column card card-shadow"
-              >
-                <h3>Language List</h3>
-                <div>
-                  <button id="languages-list-btn" class="btn top-right-btn">
-                    Render Languages List
-                  </button>
-                </div>
-                <ul>
-                  <li>
-                    <div class="bullet">1</div>
-                    <div class="li-wrapper">
-                      <div class="li-title">Language Name 1</div>
-                      <div class="li-text">Code: LN1</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="bullet">2</div>
-                    <div class="li-wrapper">
-                      <div class="li-title">Language Name 2</div>
-                      <div class="li-text">Code: LN2</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="bullet">3</div>
-                    <div class="li-wrapper">
-                      <div class="li-title">Language Name 3</div>
-                      <div class="li-text">Code: LN3</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="bullet">4</div>
-                    <div class="li-wrapper">
-                      <div class="li-title">Language Name 4</div>
-                      <div class="li-text">Code: LN4</div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <div class="full-container p-5 text-white">
+    <div class="row mb-3">
+      <a href="https://store.steampowered.com/?snr=1_4_4__global-responsive-menu">
+        <img src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
+          height="36" alt="STEAM">
+      </a>
+    </div>
+    <div class="row">
+      <!-- left navigation -->
+      <div class="col-3">
+        <div class="nav_links">
+          <a href="#">
+            <li>Home</li>
+          </a>
+          <a href="#"></a>
+          <li>Trending</li></a>
+          <a href="#"></a>
+          <li>About us</li></a>
+        </div>
+        <div class="category">
+          <ul class="categoryGroup">
+            <li class="genre-button" data-genre="action">Action</li>
+            <li class="genre-button" data-genre="free to play">Free to Play</li>
+            <li class="genre-button" data-genre="strategy">Strategy</li>
+            <li class="genre-button" data-genre="indie">Indie</li>
+            <li class="genre-button" data-genre="rpg">RPG</li>
+            <li class="genre-button" data-genre="animation & modeling">Animation & Modeling</li>
+            <li class="genre-button" data-genre="video production">Video Production</li>
+            <li class="genre-button" data-genre="casual">Casual</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- main screen -->
+      <div class="col-9">
+        <div class="row">
+          <div class="col input-group mb-3">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search">
+            <div class="input-group-append">
+              <button class="btn btn-outline-primary" type="button">
+                <i class="fa fa-search"></i>
+              </button>
             </div>
           </div>
         </div>
-      </section>
-    </main>
+        <div class="row">
+          <h3>Featured Games</h3>
+          <div>Featured & Recommmended</div>
+        </div>
+        <div class="row">
+          <div class="col-4" onclick="appDetail(570)">
+              <img class="img-fluid" src="https://steamcdn-a.akamaihd.net/steam/apps/570/header.jpg?t=1554408611" data-id="570">
+              <div class="game_info">
+                <p>Dota 2</p>
+                <p> Free to Play</p>
+              </div>
+          </div>
+          <div class="col-4" onclick="appDetail(440)">
+            <img class="img-fluid" src="https://steamcdn-a.akamaihd.net/steam/apps/440/header.jpg?t=1539304875" data-id="440">
+            <div class="game_info">
+              <p>Team Fortress 2</p>
+              <p>Free to Play</p>
+              </div>
+          </div>
+          <div class="col-4" onclick="appDetail(730)">
+              <img class="img-fluid" src="https://steamcdn-a.akamaihd.net/steam/apps/730/header.jpg?t=1554409309" data-id="730">
+              <div class="game_info">
+                <p>Counter-Strike: Global Offensive</p>
+                <p> Free to Play</p>
+              </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4" onclick="appDetail(4000)">
+            <img class="img-fluid" src="https://steamcdn-a.akamaihd.net/steam/apps/4000/header.jpg?t=1535986052" data-id="4000">
+            <div class="game_info">
+              <p>Garry's Mod</p>
+              <p>$6.99</p>
+              </div>
+          </div>
+          <div class="col-4" onclick="appDetail(304930)">
+            <img class="img-fluid" src="https://steamcdn-a.akamaihd.net/steam/apps/304930/header.jpg?t=1540101174" data-id="340930">
+            <div class="game_info">
+              <p>Unturned</p>
+              <p> Free To Play</p>
+              </div>
+          </div>
+          <div class="col-4" onclick="appDetail(218620)">
+            <img class="img-fluid" src="https://steamcdn-a.akamaihd.net/steam/apps/218620/header.jpg?t=1541531328" data-id="218620">
+            <div class="game_info">
+              <p>PAYDAY 2</p>
+              <p>$7.49</p>
+              </div>
+          </div>
 
-    <script src="./script.js"></script>
-  </body>
+          <div class="row">
+            <div class="col-4" onclick="appetail(105600)">
+              <img class="img-fluid" src="https://steamcdn-a.akamaihd.net/steam/apps/105600/header.jpg?t=1548954652" data-id="105600">
+              <div class="game_info">
+                <p>Terraria</p>
+                <p> $6.99</p>
+                </div>
+            </div>
+            <div class="col-4" onclick="appDetail(550)">
+              <img class="img-fluid" src="https://steamcdn-a.akamaihd.net/steam/apps/550/header.jpg?t=1540300687" data-id="550">
+              <div class="game_info">
+                <p>Left 4 Dead 2</p>
+                <p>$7.19</p>
+                </div>
+            </div>
+            <div class="col-4" onclick="appDetail(72850)">
+              <img class="img-fluid" src="https://steamcdn-a.akamaihd.net/steam/apps/72850/header.jpg?t=1493767797" data-id="72850">
+              <div class="game_info">
+                <p>The Elder Scrolls V: Skyrim</p>
+                <p> $9.99</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tab_features">
+          See more: <span class="features_see_more btnv6_white_transparent btn_small_tall" onclick="renderFeatures()">Featured Games
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+
 </html>
